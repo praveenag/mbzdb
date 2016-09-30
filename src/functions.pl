@@ -91,7 +91,7 @@ sub mbz_create_extra_tables {
 # @param $sql The SQL statement to be executed.
 # @return Passthru from $dbh::do().
 sub mbz_do_sql {
-	#print "[SQL] $_[0]\n";
+	print "[SQL] $_[0]\n";
 	my $result = $dbh->do($_[0]);
 	$result or mbz_sql_error($dbh->errstr, $_[0]) if($_[1] ne 'nodie');
 	return $result;

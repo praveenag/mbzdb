@@ -25,7 +25,7 @@ $g_db_rdbms = 'mysql';
 # Schema. This is where the SQL scripts to create the schema come from, only edit this if you know
 # what you're doing.
 #$schema_base    = 'https://raw.github.com/metabrainz/musicbrainz-server/master';
-$schema_base    = 'https://raw.githubusercontent.com/metabrainz/musicbrainz-server/master';
+$schema_base    = 'http://localhost:8000';
 $g_schema_url   = "$schema_base/admin/sql/CreateTables.sql";
 $g_indexfk_url  = "$schema_base/admin/sql/CreateFKConstraints.sql";
 $g_index_url    = "$schema_base/admin/sql/CreateIndexes.sql";

@@ -23,7 +23,7 @@
 # @return $dbh
 sub backend_NAME_connect {
 	$driver = 'mysql';
-	$dbh = DBI->connect("dbi:$driver:dbname=$g_db_name;host=$g_db_host;port=$g_db_port",
+	$dbh = DBI->connect("dbi:$driver:dbname=$g_db_name;host=$g_db_host;port=$g_db_port;encoding='UTF-8'",
 						$g_db_user, $g_db_pass);
 	return $dbh;
 }
@@ -51,9 +51,9 @@ sub backend_NAME_update_index {
 # @return 1 if the table exists, otherwise 0.
 sub backend_NAME_table_exists {
 	my $table_name = $_[0];
-	
+
 	# your code here
-	
+
 	return 0;
 }
 
@@ -76,9 +76,9 @@ sub backend_NAME_escape_entity {
 # @return 1 if the table column exists, otherwise 0.
 sub backend_NAME_table_column_exists {
 	my ($table_name, $col_name) = @_;
-	
+
 	# your code here
-	
+
 	return 0;
 }
 
@@ -89,9 +89,9 @@ sub backend_NAME_table_column_exists {
 # @return 1 if the index exists, otherwise 0.
 sub backend_NAME_index_exists {
 	my $index_name = $_[0];
-	
+
 	# your code here
-	
+
 	return 0;
 }
 

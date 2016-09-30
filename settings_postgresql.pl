@@ -3,13 +3,13 @@
 #############################
 
 # Database user name.
-$g_db_user = 'ngsdb';
+$g_db_user = 'postgres';
 
 # Database user password.
-$g_db_pass = 'ngsdb';
+$g_db_pass = '';
 
 # The name of the database to use.
-$g_db_name = 'ngsdb';
+$g_db_name = 'musicbrainz';
 
 
 #############################

@@ -24,7 +24,7 @@ sub soundex_init {
 	mbz_do_sql("DROP TABLE artist_soundex") if(mbz_table_exists("artist_soundex"));
 	mbz_do_sql("DROP TABLE track_soundex") if(mbz_table_exists("track_soundex"));
 	print " Done\n";
-	
+
 	# create tables.
 	print "Creating soundex tables...";
 	mbz_do_sql(qq|
@@ -46,7 +46,7 @@ sub soundex_init {
 		) engine=$g_mysql_engine
 	|);
 	print " Done\n";
-	
+
 	# load raw data in from original tables
 	print "Insering raw album data...";
 	mbz_do_sql("insert into album_soundex  select id, soundex(name) from album");
@@ -57,7 +57,7 @@ sub soundex_init {
 	print "Insering raw track data...";
 	mbz_do_sql("insert into track_soundex  select id, soundex(name) from track");
 	print " Done\n";
-	
+
 	# apply index
 	print "Indexing album soundex...";
 	mbz_do_sql(qq|
@@ -80,7 +80,7 @@ sub soundex_init {
 		add index(soundindex)
 	|);
 	print " Done\n";
-	
+
 	return 1;
 }
 
